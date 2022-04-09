@@ -12,7 +12,15 @@ const Question = (props) => {
 	const correctRef = useRef();
 	const wrongRef = useRef();
 	const { seconds, isRunning, start, pause, resume, restart } = useTimer({
-		onExpire: () => console.warn("onExpire called"),
+		onExpire: () => {
+			console.log("Time is over");
+			setDisabledCick(true);
+
+			const timer = setTimeout(() => {
+				props.nextQuestion();
+				setDisabledCick(false);
+			}, 1500);
+		},
 	});
 
 	const checkAnswer = (value, e) => {
@@ -39,8 +47,8 @@ const Question = (props) => {
 	//console.log(answers, question);
 	return (
 		<div>
-			<div style={{ fontSize: "20px" }}>
-				<span>{seconds}</span>
+			<div style={{ fontSize: "20px", color: seconds < 10 ? "red" : "white" }}>
+				<span>{seconds > 0 ? seconds : "TIME IS OVER"}</span>
 			</div>
 			<div
 				className="question"

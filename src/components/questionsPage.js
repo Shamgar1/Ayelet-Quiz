@@ -38,17 +38,21 @@ const QuestionsPage = (props) => {
 					Results
 					<div>
 						You Answered:{numCorrect} From {props.questions.length}
+						<br />
 						{(numCorrect / props.questions.length) * 100 >= 90
 							? "Congratulations! You are a winner"
 							: (numCorrect / props.questions.length) * 100 >= 70
 							? "Good job! But we seek excellence, try again."
 							: "Are you feeling OK? Try again."}
+						<br />
 						<button
 							onClick={() => {
 								setCurrentQuestionIndex(0);
 								props.setShowGame(false);
 							}}
-						></button>
+						>
+							Play Again
+						</button>
 					</div>
 				</div>
 			)}
