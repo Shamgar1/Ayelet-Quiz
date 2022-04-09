@@ -1,0 +1,243 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url("/src/images/brick.jpg")
+}
+#root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 90vh;
+}
+#root>div{
+  width: 100%;
+}
+div {
+  box-sizing: border-box;
+}
+
+.quiz {
+  width: 975px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+HTML CSSResult Skip Results Iframe EDIT ON .neonText {
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+
+h1 {
+  font-size: 4.2rem;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+.neonText {
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 20px #0fa,
+    0 0 82px rgb(255, 199, 16),
+    0 0 50px rgb(223, 55, 55),
+    0 0 80px #0fa,
+    0 0 100px #0fa;
+}
+
+.Opening {
+color: white;
+padding: 20px;
+min-height: 60px;
+flex-direction: column;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 30px;
+border-radius: 20rem;
+box-shadow: 0 0 0.2rem #fff,
+0 0 0.2rem #fff,
+0 0 2rem #bc13fe,
+0 0 0.8rem #bc13fe,
+0 0 2.8rem #bc13fe,
+inset 0 0 1.3rem #bc13fe;
+animation: flicker 1.5s infinite alternate;
+}
+
+.startGame {
+margin: 0 auto;
+/* color: #fff; */
+background: #0b0e21;
+width: 300px;
+font-size: 18px;
+font-weight: 600;
+padding: 14px 75px;
+text-transform: uppercase;
+cursor: pointer;
+text-align: center;
+border-radius: 2rem;
+box-shadow: 0 0 0.2rem #fff,
+0 0 0.2rem #fff,
+0 0 2rem #9a9a9a,
+0 0 0.8rem #c3c3c3,
+0 0 2.8rem #ffffff,
+inset 0 0 1.3rem #dcdcdc;
+animation: flicker 1.5s infinite alternate;
+}
+
+
+
+.question {
+  color: white;
+  padding: 40px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem rgb(11, 8, 8),
+  0 0 0.2rem #fff,
+  0 0 2rem #f9f9f9,
+  0 0 0.8rem #ffffff,
+  0 0 2.8rem #dcdcdc,
+  inset 0 0 1.3rem #bc13fe;
+  font-size: 24px;
+  text-align: left;
+  }
+
+.Questions {
+  color: white;
+  padding: 20px;
+  min-height: 60px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  border-radius: 20rem;
+  box-shadow: 0 0 0.2rem #fff,
+    0 0 0.2rem #fff,
+    0 0 2rem #ffffff,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+   inset 0 0 1.3rem #bc13fe;
+}
+
+.results {
+  background-color: rgb(0, 0, 0);
+  height: 300px;
+  text-align: center;
+  animation: flicker 1.5s infinite alternate;
+    box-shadow: 0 0 0.2rem #fff,
+    0 0 0.2rem #fff,
+    0 0 2rem #ffffff,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe;
+}
+
+.results-info {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.answer {
+  width: 40%;
+  border: 2px solid #ffffff;
+  min-height: 70px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  display: center;
+  border-radius: 2rem;
+  box-shadow: 0 0 0.2rem #fff,
+  0 0 0.2rem #fff,
+  0 0 2rem #bc13fe,
+  0 0 0.8rem #bc13fe,
+  0 0 2.8rem #bc13fe,
+  inset 0 0 1.3rem #bc13fe;
+  font-size: 20px;
+  text-align: center;
+}
+
+.answers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.answer-text {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.correct-answer {
+  border: 4px solid #1ea55b;
+  text-align: center;
+}
+
+.correct-answer .answer-letter {
+  background: #1ea55b;
+  text-align: center;
+}
+
+.wrong-answer {
+  border: 4px solid #dc0a0a;
+  text-align: center;
+}
+
+.wrong-answer .answer-letter {
+  background: #dc0a0a;
+  text-align: center;
+}
+
+.score {
+  background: rgb(0, 0, 0);
+  color: 000;
+  font-size: 18px;
+  width: 200px;
+  margin: 0 auto;
+  font-weight: 600;
+  height: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disabled-answer {
+  pointer-events: none;
+}
