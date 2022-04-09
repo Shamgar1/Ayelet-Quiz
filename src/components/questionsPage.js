@@ -9,7 +9,6 @@ const initialState = {
 const QuestionsPage = (props) => {
 	const [showResults, setshowResults] = useState(false);
 	initialState.questions = props.questions;
-	console.log(props.questions);
 	const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 	const [numCorrect, setNumCorrect] = useState(0);
 	const nextQuestion = () => {

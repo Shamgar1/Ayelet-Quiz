@@ -13,7 +13,6 @@ const Question = (props) => {
 	const wrongRef = useRef();
 	const { seconds, isRunning, start, pause, resume, restart } = useTimer({
 		onExpire: () => {
-			console.log("Time is over");
 			setDisabledCick(true);
 
 			const timer = setTimeout(() => {
@@ -44,7 +43,6 @@ const Question = (props) => {
 		time.setSeconds(time.getSeconds() + 30);
 		restart(time);
 	}, [question]);
-	//console.log(answers, question);
 	return (
 		<div>
 			<div style={{ fontSize: "20px", color: seconds < 10 ? "red" : "white" }}>
